@@ -15,5 +15,15 @@ class Stack {
     }
   }
 
-  printStack() {}
+  printStack() {
+    console.log(this.stackItems);
+  }
+}
+
+var stackObject = new Stack();
+
+function pushIntoStack() {
+  var stackInput = document.getElementById("stackInput").value;
+  stackObject.push(stackInput);
+  stackObject.printStack();
 }
