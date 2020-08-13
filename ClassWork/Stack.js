@@ -11,7 +11,8 @@ class Stack {
     if (this.stackItems.length !== 0) {
       this.stackItems.pop();
     } else {
-      return "Empty Stack";
+      console.log("Empty Stack");
+      return this.stackItems;
     }
   }
 
@@ -25,5 +26,10 @@ var stackObject = new Stack();
 function pushIntoStack() {
   var stackInput = document.getElementById("stackInput").value;
   stackObject.push(stackInput);
+  stackObject.printStack();
+}
+
+function popOutOfStack() {
+  stackObject.pop();
   stackObject.printStack();
 }
