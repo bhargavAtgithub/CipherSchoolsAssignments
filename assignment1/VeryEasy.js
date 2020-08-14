@@ -63,3 +63,18 @@ function reverseWord(sentence, letter) {
   return finalSentence.join(" ");
 }
 
+// Hitting the JackPot
+function testJackPot(pot) {
+  var firstOfPot = pot[0];
+  for (let i = 0; i < pot.length; pot++) {
+    if (firstOfPot !== pot[i]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+// Remove duplicates from an array
+function removeDups(arr) {
+  return arr.filter((value, index) => arr.indexOf(value) === index);
+}
