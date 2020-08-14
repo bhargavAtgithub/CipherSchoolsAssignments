@@ -32,6 +32,34 @@ function sumOfNumbers(number) {
 }
 
 // Replace Vowel with Another Character
-function replaceVowel(){
-
+function replaceVowel(word) {
+  var modifiedWord = [];
+  word = word.split("");
+  var vowels = ["a", "e", "i", "o", "u"];
+  for (var i = 0; i < word.length; i++) {
+    if (vowels.indexOf(word[i]) < 0) {
+      modifiedWord.push(word[i]);
+    } else {
+      modifiedWord.push(vowels.indexOf(word[i]));
+    }
+  }
+  modifiedWord = modifiedWord.join("");
+  return modifiedWord;
 }
+
+// Medium
+// Reverse Words Starting with a particular word
+function reverseWord(sentence, letter) {
+  var finalSentence = [];
+  var splitWords = sentence.split(" ");
+  console.log(splitWords);
+  for (var i = 0; i < splitWords.length; i++) {
+    if (splitWords[i][0] === letter) {
+      finalSentence.push(splitWords[i].split("").reverse().join(""));
+    } else {
+      finalSentence.push(splitWords[i]);
+    }
+  }
+  return finalSentence.join(" ");
+}
+
