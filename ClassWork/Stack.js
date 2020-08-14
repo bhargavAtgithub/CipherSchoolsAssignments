@@ -17,7 +17,11 @@ class Stack {
   }
 
   printStack() {
-    console.log(this.stackItems);
+    document.getElementById("stackDisplay").innerHTML = "<li>" + "</li>";
+    for (var item in this.stackItems) {
+      document.getElementById("stackDisplay").innerHTML +=
+        "<li>" + this.stackItems[item] + "</li>";
+    }
   }
 }
 
